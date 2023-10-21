@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+/* Style the form container */
+.form-container {
+  width: 50%;
+  margin: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style the form elements */
+.form-container input[type=text], .form-container input[type=tel], .form-container input[type=email], .form-container select {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+/* Change the border color on focus */
+.form-container input[type=text]:focus, .form-container input[type=tel]:focus, .form-container input[type=email]:focus, .form-container select:focus {
+  border-bottom: 2px solid #04AA6D;
+}
+
+/* Style the radio buttons */
+.form-container input[type=radio] {
+  margin-right: 10px;
+}
+
+/* Style the submit button */
+.form-container button {
+  width: 100%;
+  height: 50px;
+  background-color: #04AA6D;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Change the button color on hover */
+.form-container button:hover {
+  background-color: #03a55a;
+}
+</style>
+</head>
+<body>
+
+<form class="form-container" action="https://formspree.io/f/mqkvnanv" method="POST">
+<h2>Personal Information</h2>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br>
+<label for="contact">Contact Number:</label>
+<input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required><br>
+<label for="email">Email ID:</label>
+<input type="email" id="email" name="email" required><br>
+<label for="target">Target ID:</label>
+<input type="text" id="target" name="target" required><br>
+
+<h2>Book Option</h2>
+<p>Do you want to book a product?</p>
+<input type="radio" id="yes" name="book" value="yes">
+<label for="yes">Yes</label><br>
+<input type="radio" id="no" name="book" value="no">
+<label for="no">No</label><br>
+
+<button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
